@@ -1,0 +1,19 @@
+****$
+***$*
+**$**
+*$***
+$****
+
+$****
+*$***
+**$**
+***$*
+****$
+
+
+
+take input from user 10
+how many are even
+how many are odd
+total of even 
+total of odd
