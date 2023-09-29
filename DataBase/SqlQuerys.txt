@@ -1,0 +1,45 @@
+create database database_name;
+create table table_name(
+Column_names datatype size;
+
+);
+
+
+
+use database_name;
+create table table_name(
+Column_names datatype size;
+);
+
+
+
+INSERT INTO popel (name,age) VALUES ("Dhaval",36),("Mayur",26)
+,("Kunal",20);
+
+
+alert table table_name add column_name datatype size ;
+
+
+ALTER TABLE popel ADD mobile bigint (10);
+
+
+
+INSERT INTO popel(mobile) VALUES(9512714369);
+
+
+update table_name set column_name="Values" where id =?id
+
+
+UPDATE popel SET mobile = 8888888888 WHERE id=1;
+
+
+
+TRUNCATE  TABLE popel;
+
+
+
+INSERT INTO `popel` (`id`, `name`, `age`, `mobile`) VALUES (NULL, 'Hardik', '20', '998989988989'), (NULL, 'Dhurvi', '22', '565656566565'), (NULL, 'Jay', '27', '78787878787'), (NULL, 'Ronak', '22', '58585858585');
+
+
+
+DROP TABLE popel;

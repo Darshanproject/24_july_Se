@@ -1,0 +1,14 @@
+input:hover{
+    background-color: red;
+}
+p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+.after::before{
+    content: " Hello";
+}
+p::first-letter{
+    font-size: 24px;
+    font-weight: bold;
+}

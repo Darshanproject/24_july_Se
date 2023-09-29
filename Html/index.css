@@ -1,0 +1,24 @@
+h1{
+    color: brown;
+}
+
+.box{
+    border: 5px double green;
+    height: 150px;
+    background-color: wheat;
+}
+.column    {
+    background-color: grey ;
+    padding: 5px;
+    border: 2px solid black;
+    margin: 5px;
+    display: inline-flex;
+    /* flex-direction: ; */
+    
+}
+.col-5{
+    width: 40%;
+}
+.row{
+    border: 5px solid green;
+}
