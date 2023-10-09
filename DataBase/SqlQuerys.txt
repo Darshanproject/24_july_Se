@@ -17,7 +17,7 @@ INSERT INTO popel (name,age) VALUES ("Dhaval",36),("Mayur",26)
 ,("Kunal",20);
 
 
-alert table table_name add column_name datatype size ;
+alter table table_name add column_name datatype size ;
 
 
 ALTER TABLE popel ADD mobile bigint (10);
@@ -43,3 +43,97 @@ INSERT INTO `popel` (`id`, `name`, `age`, `mobile`) VALUES (NULL, 'Hardik', '20'
 
 
 DROP TABLE popel;
+
+
+CREATE TABLE Employees(
+	id int PRIMARY key AUTO_INCREMENT NOT NULL,
+    E_name varchar (50),
+	E_Address varchar(60),
+	E_email varchar(50),
+	E_des varchar(50)
+);
+
+
+
+insert INTO employees (E_name,E_Address,E_email,E_des) VALUES ("Kunal","Thaltej","kunal@gmail.com","Developer"),("Ankit","Shivranjani","ankit@gmail.com","Back End-Developer"),("Mayur","Gandhinagar","mayur@gmail.com","HR");
+insert INTO employees (E_name,E_Address,E_email,E_des,mobile) VALUES ("Kunal","Thaltej","kunal@gmail.com","Developer",8523697415),("Ankit","Shivranjani","ankit@gmail.com","Back End-Developer",7896541239),("Mayur","Gandhinagar","mayur@gmail.com","HR",9874526310);
+TRUNCATE TABLE employees;
+
+
+
+DROP TABLE employees;
+
+
+ALTER TABLE employees ADD mobile bigint(10);
+
+
+UPDATE employees SET  E_Address="Gurkul" WHERE E_name="Ankit";
+
+
+SELECT * FROM `employees` WHERE 1;
+
+
+SELECT (E_name) FROM `employees` WHERE 1
+
+
+INSERT INTO `salarys` (`id`, `name`, `salary`, `mobile`) VALUES (NULL, 'kunal', '22000', '9998036978'), (NULL, 'Ankit', '25000', '98745633210'), (NULL, 'Mark', '50000', '8745963210');
+
+
+SELECT SUM(salary) FROM `salarys` ;
+
+SELECT MAX(salary) FROM salarys;
+
+SELECT MIN(salary) FROM `salarys`;
+
+SELECT AVG(salary) FROM `salarys`;
+
+
+SELECT FIRST(salary) FROM `salarys`;
+
+SELECT SUM(salary) AS totalsalary FROM `salarys` ;
+
+
+
+
+ALTER TABLE employees DROP mobile;
+
+
+
+CREATE TABLE office(
+id int PRIMARY KEY AUTO_INCREMENT NOT Null,
+   name varchar(20),
+    salarys bigint(50),
+	dept varchar(20),
+    f_key int NOT Null,
+    FOREIGN KEY (f_key) REFERENCES salarys(id)
+);
+
+
+
+
+INSERT INTO `office` (name, salarys, dept,f_key) VALUES 
+('kunal', '22000','Developer',1), ('Ankit', '25000', 'Developer',2), 
+('Mark', '50000', 'HR',3);
+
+
+
+INSERT INTO `man` (`id`, `name`, `salarys`, `F_name`) VALUES (NULL, 'Dodiya', '85000', '3'), 
+(NULL, 'Shara', '97000', '2'), (NULL, 'Shah', '100000', '1');
+
+
+
+SELECT * FROM students WHERE stud_name LIKE "s%";
+
+
+09-oct-2023  Monday
+
+SELECT office.name, salarys.salary FROM office INNER JOIN salarys  ON
+office.id = salarys.id
+
+
+
+SELECT salarys.name, office.salarys FROM salarys LEFT JOIN office ON
+salarys.id = office.id;
+
+SELECT salarys.name, office.salarys FROM office RIGHT JOIN salarys ON
+office.id = salarys.id;

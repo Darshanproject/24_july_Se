@@ -1,0 +1,34 @@
+create database database_name;
+
+
+
+CREATE DATABASE jul24;
+
+
+create table table_name(
+	column_name datatype size,
+
+);
+
+
+use jul24;
+CREATE TABLE Students(
+id int (255),
+    name varchar(300),
+    surname varchar(255)
+
+);
+
+
+
+insert into table_name (column_name) values ("data");
+
+
+INSERT INTO students(id,name,surname) VALUES (1,"Dhaval","Bhatti")
+,(2,"Mayur","Dodiya");
+INSERT INTO students(id,name,surname) VALUES(3,"Mihir","Panchal");
+
+
+
+
+ALTER TABLE students MODIFY id int PRIMARY KEY AUTO_INCREMENT NOT null;
